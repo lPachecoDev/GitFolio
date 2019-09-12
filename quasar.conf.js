@@ -86,7 +86,10 @@ module.exports = function (ctx) {
     },
 
     // animations: 'all', // --- includes all animations
-    animations: [],
+    animations: [
+      'slideInUp',
+      'fadeOut'
+    ],
 
     ssr: {
       pwa: false
