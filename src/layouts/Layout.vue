@@ -23,7 +23,7 @@
     </q-page-container>
 
     <q-footer class="row">
-      <div class="col-3">
+      <div class="col-sm-4 col-md-2 offset-md-3">
         <router-link to="/">
           <q-img
             v-if="isHome()"
@@ -35,20 +35,8 @@
           />
         </router-link>
       </div>
-      <div class="col-3">
-        <router-link to="/profile">
-          <q-img
-            v-if="isPortfolio()"
-            src="statics/footer/Portfolio_Pressed.png"
-          />
-          <q-img
-            v-else
-            src="statics/footer/Portfolio.png"
-          />
-        </router-link>
-      </div>
-      <div class="col-3">
-        <router-link to="/budget">
+      <div class="col-sm-4 col-md-2 offset-md-3">
+        <router-link to="/curriculum">
           <q-img
             v-if="isCV()"
             src="statics/footer/Curriculum_Pressed.png"
@@ -59,8 +47,8 @@
           />
         </router-link>
       </div>
-      <div class="col-3">
-        <router-link to="/cart">
+      <div class="col-sm-4 col-md-2 offset-md-3">
+        <router-link to="/contact">
           <q-img
             v-if="isContact()"
             src="statics/footer/Contact_Pressed.png"
@@ -87,9 +75,6 @@ export default {
   methods: {
     isHome () {
       return this.$router.history.current['path'] === '/'
-    },
-    isPortfolio () {
-      return this.$router.history.current['path'] === '/portfolio'
     },
     isCV () {
       return this.$router.history.current['path'] === '/curriculum'
